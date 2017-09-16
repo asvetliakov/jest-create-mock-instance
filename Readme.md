@@ -77,13 +77,13 @@ beforeEach(() => {
 });
 ```
 
-*Instead you can just write:*
+**Instead you can just write:**
 
 ```ts
 import createMockInstance from "jest-create-mock-instance";
 import { Food } from "../food";
 
-let food: jest.Mocked<Food1>;
+let food: jest.Mocked<Food>;
 beforeEach(() => {
     food = createMockInstance(food);
 });
