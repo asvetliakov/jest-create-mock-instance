@@ -2,7 +2,7 @@
 
 This library uses ```jest-mock``` internal package to automatically create & instantiate mock for given class/function constructor.
 
-I've been always fan of using ```sinon.createStubInstance()``` in my tests. Unfortunately, Jest doesn't expose similar API to create new mocked instance for given class constructor. Using ```jest.fn()``` is not very convienment for various cases, take an example of these classes and unit test:
+I've been always fan of using ```sinon.createStubInstance()``` in my tests. Unfortunately, Jest doesn't expose similar API to create new mocked instance for given class constructor. Using ```jest.fn()``` or jest's module mocks is not very convienment for various cases, take an example of these classes and unit test:
 
 
 food.js
@@ -45,7 +45,7 @@ it("Must eat", () => {
 });
 ```
 
-By using ```jest.fn()``` you must mock your module before and instantiate ```Food``` directly:
+By using jest module mocks you must mock your module before and instantiate ```Food``` directly:
 
 ```js
 jest.mock("../food");
@@ -85,7 +85,7 @@ import { Food } from "../food";
 
 let food: jest.Mocked<Food>;
 beforeEach(() => {
-    food = createMockInstance(food);
+    food = createMockInstance(Food);
 });
 ```
 
