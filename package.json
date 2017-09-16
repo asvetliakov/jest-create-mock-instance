@@ -1,0 +1,21 @@
+{
+  "name": "jest-create-mock-instance",
+  "version": "1.0.0",
+  "description": "Create class mock instances easily with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Jest",
+    "Mock"
+  ],
+  "author": "Alexey Svetliakov <asvetliakov@teledini.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest-mock": ">=21.0.0"
+  },
+  "devDependencies": {
+    "jest": "^21.1.0"
+  }
+}
