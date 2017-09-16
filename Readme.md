@@ -49,7 +49,7 @@ By using ```jest.fn()``` you must mock your module before and instantiate ```Foo
 
 ```js
 jest.mock("../food");
-import { Food } from "food";
+import { Food } from "../food";
 
 beforeEach(() => {
     food = new Food();
@@ -93,3 +93,7 @@ beforeEach(() => {
 ## Install
 
 ```npm install jest-create-mock-instance --save-dev```
+
+## Typescript
+
+```createMockInstance``` returns ```jest.Mocked<T>``` object. Don't forget to install ```@types/jest``` package.
