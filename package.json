@@ -1,6 +1,6 @@
 {
   "name": "jest-create-mock-instance",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create class mock instances easily with Jest",
   "main": "index.js",
   "scripts": {
