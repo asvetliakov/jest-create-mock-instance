@@ -16,9 +16,6 @@
   ],
   "author": "Alexey Svetliakov <asvetliakov@teledini.com>",
   "license": "MIT",
-  "peerDependencies": {
-    "jest-mock": "*"
-  },
   "devDependencies": {
     "jest": "^21.2.1"
   }
