@@ -1,5 +1,4 @@
 var jestMock = require("jest-mock");
-Object.defineProperty(exports, "__esModule", { value: true });
 
 /**
  * Create mock instance of given class or function constructor
@@ -12,7 +11,5 @@ function createMockInstance(cl) {
     return new Mock();
 }
 
-module.exports = {
-    default: createMockInstance,
-    createMockInstance: createMockInstance
-};
+exports.default = exports.createMockInstance = createMockInstance;
+Object.defineProperty(exports, "__esModule", { value: true });
