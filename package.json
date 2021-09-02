@@ -17,6 +17,6 @@
   "author": "Alexey Svetliakov <asvetliakov@teledini.com>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "27"
   }
 }

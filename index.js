@@ -7,7 +7,13 @@ var jestMock = require("jest-mock");
  * @returns New mocked instance of given constructor with all methods mocked
  */
 function createMockInstance(cl) {
-    var Mock = jestMock.generateFromMetadata(jestMock.getMetadata(cl));
+    var mocker = jestMock;
+
+    // jest-mock 27 doesn't export an instance of ModuleMocker anymore.
+    if (jestMock.ModuleMocker) {
+        mocker = new jestMock.ModuleMocker(global);
+    }
+    var Mock = mocker.generateFromMetadata(mocker.getMetadata(cl));
     return new Mock();
 }
 
