@@ -9,7 +9,7 @@ var jestMock = require("jest-mock");
 function createMockInstance(cl) {
     var mocker = jestMock;
 
-    // jest-mock 27 doesn't export an instance of ModuleMocker anymore.
+    // jest-mock >= 27 doesn't export an instance of ModuleMocker anymore.
     if (jestMock.ModuleMocker) {
         mocker = new jestMock.ModuleMocker(global);
     }
